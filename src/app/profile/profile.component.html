@@ -1,13 +1,10 @@
 <div class= "container">
     <div class="jumbotron">
-      <h1>GitHub Search</h1>
+      <img src="https://avatars0.githubusercontent.com/u/9919?s=280&v=4" width="50px" height="50px"> <h1>GitHub Search</h1>
+
     </div>
-    <div class="row">
-      <div class="col-md-6">
         <app-profile-form></app-profile-form>
-        <a href="{{user.html_url}}" class="btn btn-success" id="view">Search</a>
-      </div>
-      <div class="col-md-6">
+        <a href="{{user.html_url}}" class="btn btn-success" id="view">Visit the profile</a>
         <table>
           <tr>
             <td >Github username: </td>
@@ -18,7 +15,5 @@
             <td class="label">{{user.public_repos}}</td>
           </tr>
           </table>
-      </div>
-    </div>
   </div>
  
