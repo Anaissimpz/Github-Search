@@ -54364,13 +54364,13 @@ var GitService = /** @class */ /*@__PURE__*/ (function () {
         this.http = http;
         console.log("service is now ready!");
         this.username = 'Anaissimpz';
-        this.user = new _user__WEBPACK_IMPORTED_MODULE_1__["User"](' ', ' ', ' ', ' ', ' ', 0, ' ');
-        this.repository = new _repository__WEBPACK_IMPORTED_MODULE_2__["Repository"](' ', ' ', ' ', ' ', ' ');
+        this.user = new _user__WEBPACK_IMPORTED_MODULE_1__["User"](' ', ' ', ' ', ' ', ' ', 0, ' ', new Date());
+        this.repository = new _repository__WEBPACK_IMPORTED_MODULE_2__["Repository"](' ', ' ', ' ', ' ', ' ', new Date());
     }
     GitService.prototype.getProfileInfo = function (username) {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get("https://api.github.com/users/" + username + "?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254").toPromise().then(function (profile) {
+            _this.http.get("https://api.github.com/users/" + username + "?access_token=4e506891c065d69bf641bbe51727e32d407658e2").toPromise().then(function (profile) {
                 _this.user.name = profile.name;
                 _this.user.login = profile.login;
                 _this.user.avatar_url = profile.avatar_url;
@@ -54378,6 +54378,7 @@ var GitService = /** @class */ /*@__PURE__*/ (function () {
                 _this.user.location = profile.location;
                 _this.user.public_repos = profile.public_repos;
                 _this.user.html_url = profile.html_url;
+                _this.user.created_at = profile.created_at;
                 console.log(profile);
                 resolve();
             });
@@ -54387,7 +54388,7 @@ var GitService = /** @class */ /*@__PURE__*/ (function () {
     GitService.prototype.getRepoInfo = function (username) {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get("https://api.github.com/users/" + username + '/repos?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254').subscribe(function (response) {
+            _this.http.get("https://api.github.com/users/" + username + "/repos?access_token=4e506891c065d69bf641bbe51727e32d407658e2").subscribe(function (response) {
                 _this.items = response;
             });
         });
@@ -54603,7 +54604,7 @@ __webpack_require__.r(__webpack_exports__);
 var styles_ProfileComponent = [_profile_component_css_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
 var RenderType_ProfileComponent = /*@__PURE__*/ /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_ProfileComponent, data: {} });
 
-function View_ProfileComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "jumbotron"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "img", [["height", "50px"], ["src", "https://avatars0.githubusercontent.com/u/9919?s=280&v=4"], ["width", "50px"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "h1", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["GitHub Search"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "app-profile-form", [], null, null, null, _profile_form_profile_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ProfileFormComponent_0"], _profile_form_profile_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ProfileFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 114688, null, 0, _profile_form_profile_form_component__WEBPACK_IMPORTED_MODULE_3__["ProfileFormComponent"], [_gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"], _gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "a", [["class", "btn btn-success"], ["id", "view"]], [[8, "href", 4]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Visit the profile"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 11, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 10, "tbody", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Github username: "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "td", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](15, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Repositories: "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "td", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""]))], function (_ck, _v) { _ck(_v, 6, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.user.html_url, ""); _ck(_v, 7, 0, currVal_0); var currVal_1 = _co.user.login; _ck(_v, 15, 0, currVal_1); var currVal_2 = _co.user.public_repos; _ck(_v, 20, 0, currVal_2); }); }
+function View_ProfileComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 25, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "jumbotron"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "img", [["height", "50px"], ["src", "https://avatars0.githubusercontent.com/u/9919?s=280&v=4"], ["width", "50px"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "h1", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["GitHub Search"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "app-profile-form", [], null, null, null, _profile_form_profile_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ProfileFormComponent_0"], _profile_form_profile_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ProfileFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 114688, null, 0, _profile_form_profile_form_component__WEBPACK_IMPORTED_MODULE_3__["ProfileFormComponent"], [_gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"], _gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "a", [["class", "btn btn-success"], ["id", "view"]], [[8, "href", 4]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Visit the profile"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 16, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 15, "tbody", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Github username: "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "td", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](15, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Repositories: "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "td", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Created At: "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](24, 0, null, null, 1, "td", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](25, null, ["", ""]))], function (_ck, _v) { _ck(_v, 6, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.user.html_url, ""); _ck(_v, 7, 0, currVal_0); var currVal_1 = _co.user.login; _ck(_v, 15, 0, currVal_1); var currVal_2 = _co.user.public_repos; _ck(_v, 20, 0, currVal_2); var currVal_3 = _co.user.created_at; _ck(_v, 25, 0, currVal_3); }); }
 function View_ProfileComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "app-profile", [], null, null, null, View_ProfileComponent_0, RenderType_ProfileComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](512, null, _gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"], _gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 114688, null, 0, _profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"], [_gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"], _gits_git_service__WEBPACK_IMPORTED_MODULE_4__["GitService"]], null, null)], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
 var ProfileComponentNgFactory = /*@__PURE__*/ /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-profile", _profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"], View_ProfileComponent_Host_0, {}, {}, []);
 
@@ -54652,7 +54653,7 @@ var ProfileComponent = /** @class */ /*@__PURE__*/ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Repository", function() { return Repository; });
 var Repository = /** @class */ /*@__PURE__*/ (function () {
-    function Repository(name, description, html_url, clone_url, homepage) {
+    function Repository(name, description, html_url, clone_url, homepage, created_at) {
         this.name = name;
         this.description = description;
         this.html_url = html_url;
@@ -54677,7 +54678,7 @@ var Repository = /** @class */ /*@__PURE__*/ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
 var User = /** @class */ /*@__PURE__*/ (function () {
-    function User(name, login, avatar_url, email, location, public_repos, html_url) {
+    function User(name, login, avatar_url, email, location, public_repos, html_url, created_at) {
         this.name = name;
         this.login = login;
         this.avatar_url = avatar_url;
@@ -54685,6 +54686,7 @@ var User = /** @class */ /*@__PURE__*/ (function () {
         this.location = location;
         this.public_repos = public_repos;
         this.html_url = html_url;
+        this.created_at = created_at;
     }
     return User;
 }());
