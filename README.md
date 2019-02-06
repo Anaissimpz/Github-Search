@@ -1,6 +1,6 @@
 # Github-Search
 ### Due on 06th Feb 2019 By Anais Simpenzwe 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+
 ##Description
 This webapp will enable a user to search a person on Github using their username whereby after entering their username in the app the user will check below the user-name and the number of repositories that person has, after the user will have an option of visiting the profile on github and see al of their information.
 ##Technologies Used
@@ -15,6 +15,7 @@ No bugs known yet
 ## Setup/Installation Requirements
 No setup is required/installation is required to access this file
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
