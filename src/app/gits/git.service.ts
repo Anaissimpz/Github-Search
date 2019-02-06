@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../user';
-import {environment} from '../../environments/environment';
 import {Repository} from '../repository';
 
 
@@ -59,9 +58,11 @@ getRepoInfo(username) {
     html_url: string;
     clone_url: string;
 }
-this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey).subscribe(response => {
+  const promise = new Promise((resolve, reject) => {
+    this.http.get<ApiResponse>("https://api.github.com/users/" + username + '/repos?access_token=8394b5a9f426df57eb97e4b47ade0f1c6d5cda49').subscribe(response => {
   
-    this.items = response;  
+    this.items = response;
   });
+})
 }
 }
