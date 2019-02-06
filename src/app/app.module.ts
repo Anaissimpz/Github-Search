@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
     ProfileComponent,
     ProfileFormComponent,
     StrikethroughDirective,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,

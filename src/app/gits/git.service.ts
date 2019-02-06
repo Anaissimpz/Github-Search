@@ -17,8 +17,8 @@ export class GitService {
   constructor(private http:HttpClient) { 
     console.log ("service is now ready!");
     this.username = 'Anaissimpz';
-    this.user = new User (' ',' ',' ',' ',' ',0,' ');
-    this.repository = new Repository (' ', ' ', ' ', ' ', ' ');
+    this.user = new User (' ',' ',' ',' ',' ',0,' ', new Date());
+    this.repository = new Repository (' ', ' ', ' ', ' ', ' ', new Date());
   }
   getProfileInfo(username){
     interface ApiResponse {
@@ -29,11 +29,12 @@ export class GitService {
       location: string;
       public_repos: number;
       html_url: string;
+      created_at: Date;
     // return this.http.get("https://api.github.com/users/" + this.username)
 
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254").toPromise().then(profile => {
+    this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token=4e506891c065d69bf641bbe51727e32d407658e2").toPromise().then(profile => {
          this.user.name = profile.name;
         this.user.login = profile.login;
         this.user.avatar_url = profile.avatar_url;
@@ -41,6 +42,7 @@ export class GitService {
         this.user.location = profile.location;
         this.user.public_repos = profile.public_repos;
         this.user.html_url = profile.html_url;
+        this.user.created_at = profile.created_at;
 
         console.log(profile);
          resolve();
@@ -59,7 +61,7 @@ getRepoInfo(username) {
     clone_url: string;
 }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>("https://api.github.com/users/"+username+'/repos?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254').subscribe(response => {
+    this.http.get<ApiResponse>("https://api.github.com/users/"+username+"/repos?access_token=4e506891c065d69bf641bbe51727e32d407658e2").subscribe(response => {
   
     this.items = response;
   });

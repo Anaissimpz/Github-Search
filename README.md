@@ -2,7 +2,7 @@
 ### Due on 06th Feb 2019 By Anais Simpenzwe 
 
 ## Description
-This webapp will enable a user to search a person on Github using their username whereby after entering their username in the app the user will check below the user-name and the number of repositories that person has, after the user will have an option of visiting the profile on github and see al of their information.
+This webapp will enable a user to search a person on Github using their username whereby after entering their username in the app the user will check below the user-name and the number of repositories that person has and the date when their repositories were created, after the user will have an option of visiting the profile on github and see al of their information.
 ## Technologies Used
 * Angular CLI
 * HTML
