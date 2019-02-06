@@ -34,7 +34,7 @@ export class GitService {
 
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>(environment.apiUrl + username + environment.apikey).toPromise().then(profile => {
+    this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token=8394b5a9f426df57eb97e4b47ade0f1c6d5cda49").toPromise().then(profile => {
          this.user.name = profile.name;
         this.user.login = profile.login;
         this.user.avatar_url = profile.avatar_url;
