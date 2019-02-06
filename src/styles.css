@@ -1,1 +1,30 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image: url("https://images.pexels.com/photos/1020320/pexels-photo-1020320.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+h1{
+    position: relative;
+    left: 40%;
+}
+img{
+    position: relative;
+    left: 50%;
+}
+.btn-info{
+    position: relative;
+    left: 50%;
+    bottom:-30px;
+    background-color: darkgray;
+    color: black;
+    }
+    .btn-success{
+        position: relative;
+    right: 0%;
+    bottom:-150px;
+    background-color: darkgray;
+    color: black;
+    }
+    .jumbotron{
+        background-color: black;
+        color: azure;
+    }
