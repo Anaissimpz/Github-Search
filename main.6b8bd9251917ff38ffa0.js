@@ -54370,7 +54370,7 @@ var GitService = /** @class */ /*@__PURE__*/ (function () {
     GitService.prototype.getProfileInfo = function (username) {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get("https://api.github.com/users/" + username + "?access_token=8394b5a9f426df57eb97e4b47ade0f1c6d5cda49").toPromise().then(function (profile) {
+            _this.http.get("https://api.github.com/users/" + username + "?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254").toPromise().then(function (profile) {
                 _this.user.name = profile.name;
                 _this.user.login = profile.login;
                 _this.user.avatar_url = profile.avatar_url;
@@ -54387,7 +54387,7 @@ var GitService = /** @class */ /*@__PURE__*/ (function () {
     GitService.prototype.getRepoInfo = function (username) {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get("https://api.github.com/users/" + username + '/repos?access_token=8394b5a9f426df57eb97e4b47ade0f1c6d5cda49').subscribe(function (response) {
+            _this.http.get("https://api.github.com/users/" + username + '/repos?access_token=36a4a9b1bf57b4d8dd00053317a32d96d44d5254').subscribe(function (response) {
                 _this.items = response;
             });
         });
